@@ -1,0 +1,300 @@
+:root{
+    --color-1 : #0f1016;
+    --text-color: #f0f0f0;
+    --accent-color: #f0e5f8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 12pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: url(img.jpg);
+}
+
+nav{
+    height: 50px;
+    background-color: var(--color-1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #f0e5f8;
+    /* border: 1px solid rgb(12, 12, 12); */
+}
+
+nav a:hover{
+    transition: 0.4s;
+    box-shadow: 0 0 3px #8e08e7, 0 0 7px #8e08e7, 0 0 20px #8e08e7 ;
+    color: #8e08e7;
+    /* border-radius: 10%; */
+    
+    
+}
+
+nav .home-link{
+    margin-right: auto;
+}
+
+nav svg{
+    fill: var(--accent-color);
+}
+
+#sidebar-active{
+    display: none;
+}
+
+.open-sidebar-button , .close-sidebar-button{
+    display: none;
+    
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.wrapper{
+    width: 420px;
+    background: transparent;
+    color: #fff;
+    height: 360px;
+    border-radius: 20px;
+    padding: 30px 40px;
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px  rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 15px;
+    color: #fff;
+    
+}
+
+
+
+.input-box input::placeholder{
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transform: translate(-50%);
+    font-size: 20px;
+
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.btn:hover{
+    background: #8e08e7;
+    transition: 0.5s;
+    color: #fff;
+}
+
+#Get-started {
+    text-decoration: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;         
+}
+
+#Get-started button {
+    margin: 20px;
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    font-size: larger;
+    font-family: 'Poppins';
+}
+
+#Get-started button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #8e08e7;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+#Get-started button::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0; 
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+#Get-started button:hover::before {
+    opacity: 1; 
+}
+
+#Get-started button:active::after {
+    background: transparent;
+}
+
+#Get-started button:active {
+    color: #000;
+    font-weight: bold;
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+#Get-started button:hover::before {
+    opacity: 1; 
+}
+
+#Get-started button:active::after {
+    background: transparent;
+}
+
+#Get-started button:active {
+    color: #000;
+    font-weight: bold;
+}
+
+
+@media(max-width : 450px){
+    .container{
+        /* display: none; */
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        background-color: var(--color-1);
+        box-shadow: -5px 0 5px rgb(0, 0, 0, 0.25);
+        transition: 0.5s ease-out;
+
+    }
+
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+ 
+    }
+
+    .open-sidebar-button , .close-sidebar-button{
+       display: block;
+       padding: 20px;
+       
+    }
+
+
+    #sidebar-active:checked ~ .container{
+        right: 0;
+    }
+    
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100px;
+        z-index: 9;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+
